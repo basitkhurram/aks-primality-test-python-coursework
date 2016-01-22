@@ -77,16 +77,12 @@ def n_order_r(n, r):
     product = pow(n, k, r)
     #to find terms that have infinite order
     old_products = set()
-    #old_products = []
-    #old_products = {}
     while product > 1:
         k += 1
         product = pow(n, k, r)
         if product in old_products:
             return 0
         old_products.add(product)
-        #old_products.append(product)
-        #old_products[product] = None
     return k
 
 def totient(r):
