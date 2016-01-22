@@ -311,14 +311,6 @@ class Polynomial:
         remainder = dividend
         return quotient, remainder
 
-##    def __pow__(self, power):
-##        if power == 0:
-##            return 1
-##        product = 1
-##        for k in range(power):
-##            product *= self
-##        return product
-
     def __pow__(self, power, con_mod = None, poly_mod = None):
         if power == 0:
             return 1
